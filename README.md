@@ -1,5 +1,5 @@
 # react-webpack-simple-boilerplate
-A boilerplate for react , copy vue-cli
+A boilerplate for react
 根据 vue-cli 修改的 react 脚手架
 
 ```sh
