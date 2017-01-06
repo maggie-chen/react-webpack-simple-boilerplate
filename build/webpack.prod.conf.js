@@ -42,7 +42,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       chunksSortMode: 'dependency'
     }),
 
-    // 生成依赖模块的vendor manifest 文件
+    // 生成依赖模块的vendor manifest 文件 (可注释，则输入文件只为app)
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
