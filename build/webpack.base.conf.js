@@ -33,11 +33,17 @@ module.exports = {
   },
   module: {
     loaders: [
+      // {
+      //   test: /\.js[x]?$/,
+      //   loader: 'babel-loader',
+      //   include: projectRoot,
+      //   exclude: /node_modules/
+      // },
       {
-        test: /\.(js|jsx)$/,
-        loader: 'babel',
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         include: projectRoot,
-        exclude: /node_modules/
+        loader: 'babel',
       },
       {
         test: /\.css$/,
@@ -71,6 +77,6 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
-    ]
+      ]
+    }
   }
-}

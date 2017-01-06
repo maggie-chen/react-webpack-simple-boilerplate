@@ -6,7 +6,9 @@ var express = require('express') // express框架
 var webpack = require('webpack') // webpack工具
 var opn = require('opn')
 var proxyMiddleware = require('http-proxy-middleware') //反向代理中间件
-var webpackConfig = require('./webpack.dev.conf') //webpack开发配置
+var webpackConfig = process.env.NODE_ENV === 'testing'
+  ? require('./webpack.prod.conf')
+  : require('./webpack.dev.conf'); //webpack开发配置
 
 var port = process.env.PORT || config.dev.port //开发模式端口
 var proxyTable = config.dev.proxyTable //反向代理配置

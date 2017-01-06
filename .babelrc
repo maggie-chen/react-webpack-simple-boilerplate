@@ -5,6 +5,5 @@
       "presets": ["react-hmre"]
     }
   },
-  "plugins": ["transform-runtime"],
   "comments": false
 }
